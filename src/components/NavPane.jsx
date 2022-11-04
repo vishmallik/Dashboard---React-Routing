@@ -1,13 +1,13 @@
 import { NavLink } from "react-router-dom";
 
-export default function NavPane() {
+export default function NavPane(props) {
   return (
     <nav>
       <ul>
         <li>
-          <NavLink to="/" className="flex start" activeClassName="active">
+          <NavLink to="/" exact className="flex start" activeClassName="active">
             <i className="fa-solid fa-house"></i>
-            <h2>Home</h2>
+            <span>Home</span>
           </NavLink>
         </li>
         <li>
@@ -17,14 +17,14 @@ export default function NavPane() {
             activeClassName="active"
           >
             <i className="fa-solid fa-a"></i>
-            <h2>Article</h2>
+            <span>Article</span>
           </NavLink>
         </li>
 
         <li>
           <NavLink to="/help" className="flex start" activeClassName="active">
             <i className="fa-solid fa-message"></i>
-            <h2>Help & Support</h2>
+            <span>Help & Support</span>
           </NavLink>
         </li>
       </ul>
